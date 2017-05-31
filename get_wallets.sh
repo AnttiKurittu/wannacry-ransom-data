@@ -1,0 +1,1 @@
+clear && while true; do for i in $(curl -s "https://blockchain.info/q/getreceivedbyaddress/13AM4VW2dhxYgXeQepoHkHSQuy6NgaEb94|12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw|115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn"|python -c 'import sys; r = sys.stdin.readline(); print float(r) / 100000000');do d=$(date);echo "Ransom paid at $d: $i BTC" |tee -a ransom.txt; done;sleep 60;done
